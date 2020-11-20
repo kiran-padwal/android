@@ -4,35 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ListActivity">
 
-
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewList"
+        android:layout_width="394dp"
+        android:layout_height="501dp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-
-        android:id="@+id/navToList"
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="My Products"
+        android:layout_marginBottom="32dp"
+        android:onClick="onNavToNewProduct"
+        android:text="New Product"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.462"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.14"
-        android:onClick="onNavToListClick"/>
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewList" />
 
-    <Button
-        android:id="@+id/navToOption"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Option"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/navToList"
-        app:layout_constraintVertical_bias="0.083"
-        android:onClick="onNavToOptionClick" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
